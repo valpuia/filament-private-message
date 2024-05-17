@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Valpuia\FilamentPrivateMessage;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
@@ -8,17 +8,17 @@ use Filament\Support\Assets\Theme;
 use Filament\Support\Color;
 use Filament\Support\Facades\FilamentAsset;
 
-class Skeleton implements Plugin
+class FilamentPrivateMessage implements Plugin
 {
     public function getId(): string
     {
-        return 'skeleton';
+        return 'filament-private-message';
     }
 
     public function register(Panel $panel): void
     {
         FilamentAsset::register([
-            Theme::make('skeleton', __DIR__ . '/../resources/dist/skeleton.css'),
+            Theme::make('filament-private-message', __DIR__ . '/../resources/dist/filament-private-message.css'),
         ]);
 
         $panel
@@ -29,7 +29,7 @@ class Skeleton implements Plugin
             ->dangerColor(Color::Rose)
             ->successColor(Color::Green)
             ->grayColor(Color::Gray)
-            ->theme('skeleton');
+            ->theme('filament-private-message');
     }
 
     public function boot(Panel $panel): void
